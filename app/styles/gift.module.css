@@ -1,0 +1,34 @@
+.gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100px;
+}
+
+.top {
+  width: 100px;
+  height: 20px;
+  background-color: #7aa944;
+}
+
+.body {
+  width: 90px;
+  height: 60px;
+  background-color: #5c7e32;
+}
+
+.bannerY {
+  background-color: red;
+  position: absolute;
+  width: 20px;
+  height: 80px;
+}
+
+.bannerX {
+  background-color: red;
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  top: 40px;
+}
