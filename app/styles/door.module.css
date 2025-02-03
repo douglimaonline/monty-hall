@@ -1,0 +1,22 @@
+.door {
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
+  padding-top: 60px;
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.number {
+  align-self: center;
+}
+
+.knob {
+  margin-left: 10px;
+  margin-top: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
