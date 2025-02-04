@@ -3,10 +3,10 @@ import Door from '@/app/components/Door'
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
       <div>Home</div>
       <Gift />
-      <Door />
+      <Door selected />
     </div>
   )
 }
