@@ -6,7 +6,8 @@ export default function Home() {
     <div style={{ display: 'flex' }}>
       <div>Home</div>
       <Gift />
-      <Door selected />
+      <Door />
+      <Door />
     </div>
   )
 }
