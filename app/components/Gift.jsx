@@ -1,4 +1,4 @@
-import styles from '@/app/styles/gift.module.css'
+import styles from '../styles/gift.module.css'
 
 export default function Gift() {
   return (
