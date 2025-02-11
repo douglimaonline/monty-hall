@@ -11,7 +11,6 @@ export default function Home() {
 
   return (
     <div style={{ display: 'flex' }}>
-      <div>Home</div>
       <Gift />
       <Door door={door1} />
       <Door door={door2} />
