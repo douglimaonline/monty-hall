@@ -34,16 +34,16 @@ export default class DoorModel {
 
   switchSelected() {
     const select = !this.#selected
-    new DoorModel(this.number, this.hasGift, select, this.#isOpen)
+    return new DoorModel(this.number, this.hasGift, select, this.#isOpen)
   }
 
   unSelect() {
     const unSelected = false
-    new DoorModel(this.number, this.hasGift, unSelected, this.#isOpen)
+    return new DoorModel(this.number, this.hasGift, unSelected, this.#isOpen)
   }
 
   open() {
     const open = true
-    new DoorModel(this.number, this.hasGift, this.#selected, open)
+    return new DoorModel(this.number, this.hasGift, this.#selected, open)
   }
 }
