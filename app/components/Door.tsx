@@ -8,15 +8,27 @@ interface DoorPops {
 
 export default function Door(props: DoorPops) {
   const { door } = props
-  const selected = door?.selected ? styles.selected : ''
+  const selected = door?.selected ? styles.selected : null
+  const isOpen = door?.isOpen ? styles.open : null
 
-  const switchSelect = (e) => props.onChange(door.switchSelected())
-
+  const switchSelect = () => {
+    if (!door.isOpen) {
+      props.onChange(door.switchSelected())
+    }
+  }
+  const open = (e) => {
+    e.stopPropagation()
+    if (door.selected) props.onChange(door.open())
+  }
   return (
-    <div className={styles.area}>
-      <div className={`${styles.door} ${selected}`} onClick={switchSelect}>
-        <div className={styles.number}>{door?.number}</div>
-        <div className={styles.knob}></div>
+    <div className={styles.area} onClick={switchSelect}>
+      <div className={`${styles.door} ${selected} ${isOpen}`}>
+        {isOpen ? null : (
+          <>
+            <div className={styles.number}>{door?.number}</div>
+            <div className={styles.knob} onClick={open}></div>
+          </>
+        )}
       </div>
       <div className={styles.floor}></div>
     </div>

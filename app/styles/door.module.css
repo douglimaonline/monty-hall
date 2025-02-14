@@ -46,6 +46,10 @@
   color: yellow;
 }
 
+.open {
+  background-color: transparent;
+}
+
 .selected .knob {
   background-color: yellow;
 }
