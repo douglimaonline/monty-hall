@@ -2,16 +2,27 @@
 
 import Gift from './components/Gift'
 import Door from './components/Door'
-import DoorModel from './models/Door'
 import { useState } from 'react'
+import { createDoors } from './utils/doorsFunctions'
 
 export default function Home() {
-  const [door, setDoor] = useState(new DoorModel(1, false, false, false))
+  const doorList = createDoors(5, 3)
+  const [doors, setDoors] = useState(doorList)
+
+  const handleDoorChange = (updatedDoor) => {
+    setDoors((prevDoors) => {
+      return prevDoors.map((door) => {
+        return door.number === updatedDoor.number ? updatedDoor : door
+      })
+    })
+  }
 
   return (
     <div style={{ display: 'flex' }}>
       <Gift />
-      <Door door={door} onChange={(newDoor) => setDoor(newDoor)} />
+      {doors.map((d) => {
+        return <Door key={d?.number} door={d} onChange={handleDoorChange} />
+      })}
     </div>
   )
 }
