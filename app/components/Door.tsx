@@ -18,7 +18,7 @@ export default function Door(props: DoorPops) {
   }
   const open = (e) => {
     e.stopPropagation()
-    if (door.selected) props.onChange(door.open())
+    props.onChange(door.open())
   }
   return (
     <div className={styles.area} onClick={switchSelect}>
