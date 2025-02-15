@@ -48,6 +48,9 @@
 
 .open {
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .selected .knob {

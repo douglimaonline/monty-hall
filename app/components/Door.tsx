@@ -1,5 +1,6 @@
 import styles from '../styles/door.module.css'
 import DoorModel from '../models/Door'
+import Gift from './Gift'
 
 interface DoorPops {
   door: DoorModel
@@ -23,7 +24,11 @@ export default function Door(props: DoorPops) {
   return (
     <div className={styles.area} onClick={switchSelect}>
       <div className={`${styles.door} ${selected} ${isOpen}`}>
-        {isOpen ? null : (
+        {isOpen ? (
+          !door.hasGift ? null : (
+            <Gift />
+          )
+        ) : (
           <>
             <div className={styles.number}>{door?.number}</div>
             <div className={styles.knob} onClick={open}></div>
