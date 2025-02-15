@@ -12,7 +12,11 @@ export default function Home() {
   const handleDoorChange = (updatedDoor) => {
     setDoors((prevDoors) => {
       return prevDoors.map((door) => {
-        return door.number === updatedDoor.number ? updatedDoor : door
+        return door.number === updatedDoor.number
+          ? updatedDoor
+          : updatedDoor.isOpen
+          ? door
+          : door.unSelect()
       })
     })
   }
