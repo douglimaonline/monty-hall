@@ -15,7 +15,6 @@ export default function Home() {
       {doors.map((d) => {
         return (
           <Door
-            list={doorList}
             key={d?.number}
             door={d}
             onChange={(e) => handleDoorChange(e, setDoors)}
