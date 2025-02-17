@@ -7,3 +7,15 @@ export function createDoors(qnt: number, selectedDoor?: number): DoorModel[] {
     return new DoorModel(num, hasGift)
   })
 }
+
+export const handleDoorChange = (updatedDoor, setDoors) => {
+  setDoors((prevDoors) => {
+    return prevDoors.map((door) => {
+      return door.number === updatedDoor.number
+        ? updatedDoor
+        : updatedDoor.isOpen
+        ? door
+        : door.unSelect()
+    })
+  })
+}
