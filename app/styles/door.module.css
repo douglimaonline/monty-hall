@@ -56,3 +56,23 @@
 .selected .knob {
   background-color: yellow;
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.doors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  padding: 2px;
+  cursor: pointer;
+}
