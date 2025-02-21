@@ -14,7 +14,7 @@ export default function GameSet() {
       <div>
         <Card />
         <Link href={`/doors/7/4`}>
-          <Card bgcolor="#28a085">
+          <Card bgcolor="#28a085" alignCenter>
             <h2>Start</h2>
           </Card>
         </Link>
