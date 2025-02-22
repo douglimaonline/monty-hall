@@ -34,7 +34,7 @@ export default function Doors() {
         })}
       </div>
       <div style={{ alignSelf: 'center' }}>
-        <Link href="/">
+        <Link href="/game-set">
           <button className={styles.button}>Restart</button>
         </Link>
       </div>
