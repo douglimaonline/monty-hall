@@ -8,11 +8,11 @@ interface NumberEntriesProps {
 
 export default function NumberEntries(props: NumberEntriesProps) {
   function decrease() {
-    props.onChange(props.value - 1)
+    if (props.value >= 2) props.onChange(props.value - 1)
   }
 
   function increase() {
-    props.onChange(props.value + 1)
+    if (props.value <= 9) props.onChange(props.value + 1)
   }
 
   return (

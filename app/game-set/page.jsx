@@ -10,6 +10,17 @@ export default function GameSet() {
   const [doors, setDoors] = useState(7)
   const [giftDoor, setGiftDoor] = useState(3)
 
+  function handleDoorsChange(e) {
+    setDoors(e)
+    if (e < giftDoor) setGiftDoor(e)
+  }
+
+  function handleGiftDoorChange(e) {
+    if (e <= doors) {
+      setGiftDoor(e)
+    }
+  }
+
   return (
     <div className={styles.form}>
       <div>
@@ -20,7 +31,7 @@ export default function GameSet() {
           <NumberEntries
             text="Doors"
             value={doors}
-            onChange={(e) => setDoors(e)}
+            onChange={(e) => handleDoorsChange(e)}
           />
         </Card>
       </div>
@@ -29,7 +40,7 @@ export default function GameSet() {
           <NumberEntries
             text="Gift"
             value={giftDoor}
-            onChange={(e) => setGiftDoor(e)}
+            onChange={(e) => handleGiftDoorChange(e)}
           />
         </Card>
         <Link href={`/doors/${doors}/${giftDoor}`}>
