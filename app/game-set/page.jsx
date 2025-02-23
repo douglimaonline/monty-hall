@@ -7,8 +7,8 @@ import NumberEntries from '../components/NumberEntries'
 import { useState } from 'react'
 
 export default function GameSet() {
-  const [doors, setDoors] = useState(7)
-  const [giftDoor, setGiftDoor] = useState(3)
+  const [doors, setDoors] = useState(3)
+  const [giftDoor, setGiftDoor] = useState(2)
 
   function handleDoorsChange(e) {
     setDoors(e)

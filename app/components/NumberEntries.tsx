@@ -12,7 +12,7 @@ export default function NumberEntries(props: NumberEntriesProps) {
   }
 
   function increase() {
-    if (props.value <= 9) props.onChange(props.value + 1)
+    if (props.value <= 7) props.onChange(props.value + 1)
   }
 
   return (
